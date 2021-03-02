@@ -48,3 +48,4 @@ class MNIST:
         for dataset in ["train", "dev", "test"]:
             data = dict((key[len(dataset) + 1:], mnist[key]) for key in mnist if key.startswith(dataset))
             setattr(self, dataset, self.Dataset(data, shuffle_batches=dataset == "train"))
+        print("HELLO")
